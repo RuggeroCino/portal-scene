@@ -12,15 +12,15 @@ export interface IApplicationProps {
     className?: string;
 };
 
-export const Application: React.FC<IApplicationProps> = ({ className }) => {    
+export const Application: React.FC<IApplicationProps> = ({ className }) => {
     return (
         <div className={classNames('application', className)}>
-            <Canvas camera={{ position: [-3, 1, 5], fov: 95, near: 0.1, far: 100 }} flat={true}>
-                <OrbitControls maxDistance={8} minDistance={1} />
+            <Canvas camera={{ position: [0.5, 0.5, 5], fov: 40, near: 0.1, far: 50 }} flat={true}>
+                <OrbitControls maxDistance={5} minDistance={2} maxPolarAngle={1.5} enablePan={false} />
                 <Model />
                 <Sparkles
                     size={2}
-                    scale={[4, 1, 4]} 
+                    scale={[4, 1, 4]}
                     position-y={0}
                     speed={0.2}
                     count={40}
